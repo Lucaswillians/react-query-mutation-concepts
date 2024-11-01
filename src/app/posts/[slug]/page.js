@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { CardPost } from "@/components/CardPost";
+import { CardPost } from "@/components/CardPost/CardPost";
 import { CommentList } from "@/components/CommentList";
 import styles from "./page.module.css";
 import { fetchPostRating } from "@/app/page";

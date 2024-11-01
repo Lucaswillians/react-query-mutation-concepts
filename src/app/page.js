@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery, useQueries } from "@tanstack/react-query";
-import { CardPost } from "@/components/CardPost";
+import { CardPost } from "@/components/CardPost/CardPost";
 import { Spinner } from "@/components/Spinner";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -70,6 +70,7 @@ export default function Home({ searchParams }) {
           rating={ratingsAndCartegoriesMap?.[post.id]?.rating}
           category={ratingsAndCartegoriesMap?.[post.id]?.category}
           isFetching={isFetching}
+          currentPage={currentPage}
         />
       ))}
       <div className={styles.links}>

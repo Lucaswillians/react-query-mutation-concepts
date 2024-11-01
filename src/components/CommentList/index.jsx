@@ -11,7 +11,7 @@ export const CommentList = ({ comments, slug }) => {
         {comments.map((comment) => (
           <li>
             <Comment comment={comment} key={comment.id} />
-            <ReplyModal comment={comment} />
+            <ReplyModal slug={slug} comment={comment} />
             <Replies comment={comment} slug={slug} />
           </li>
         ))}
