@@ -1,44 +1,43 @@
-![](thumbnail.png)
+# Mutations e Testes com React Query 🚀
 
-![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
+Este repositório explora o uso de **mutations no React Query** e a implementação de **testes unitários** em queries, utilizando hooks customizados para simular e validar diferentes cenários de consumo de dados.
 
-# Título do Curso: React Query: Manipulando Interações com Mutations
+## Pré-requisitos
 
-Curso prático de React Query, uma ferramenta poderosa para gerenciar o estado de operações HTTP em aplicações React. Com um foco específico nas mutations e no uso do hook useMutation, este curso guiará você através de conceitos fundamentais até a implementação prática de mutações e Optimistic Update (atualização otimista). Aprenda a otimizar a interatividade da aplicação ao inserir funcionalidades como thumbsUp, comentários e respostas de comentários. Ideal para desenvolvedores que desejam melhorar a performance e a simplicidade de suas aplicações ao lidar com operações assíncronas.
+Para executar o projeto corretamente, você precisa ter o **Docker** instalado em sua máquina para rodar os serviços necessários via Docker Compose.
 
-## 🔨 Funcionalidades do Projeto
+### Configurando o Ambiente
 
-O curso abrange a integração do Back-end com o Front-end de um blog dinâmico:
+1. **Suba os Serviços com Docker Compose**:
+    ```bash
+    docker-compose up
+    ```
 
-- Listagem de posts com paginação.
-- Exibição detalhada de cada post.
-- Inserção de thumbsUp, comentários e respostas de comentários.
-- Integração com APIs usando fetch através do React-query.
+   Isso iniciará os serviços exigidos pelo projeto, permitindo que você execute o backend em um contêiner Docker. Aguarde até que todos os contêineres estejam ativos antes de seguir para a próxima etapa.
 
-## ✔️ Técnicas e Tecnologias Utilizadas
+2. **Instale as Dependências**:
+    ```bash
+    yarn
+    ```
 
-As principais técnicas e tecnologias abordadas são:
+3. **Execute o Projeto**:
+    ```bash
+    yarn dev
+    ```
 
-- `Introdução a mutation`: compreensão como o React Query simplifica a inserção de dados dinâmicos através de API's de integração.
-- `Implementação com useMutation`: utilização do hook `useMutation` para realizar a integração de APIs, gerenciando inserção e carregamento de dados, erros e cache.
-- `Técnicas avançadas`: melhores práticas e técnicas avançadas como o Optimistic Update (atualização otimista) via UI e cache.
-- `Fetch API`: realizar requisições HTTP para buscar dados.
+O projeto agora deve estar acessível localmente.
 
-## 🎯 Desafios do Curso
+## Funcionalidades Principais
 
-Implementação de funcionalidades avançadas, como:
+Este repositório destaca conceitos e práticas avançadas de **React Query**, com foco em:
 
-- Consumo de uma API de posts usando React-query.
-- Optimistic Update via UI e cache.
-- Invalidação e rollback de cache.
+- **Mutations**: Gerenciamento de operações de criação, atualização e exclusão de dados assíncronos.
+- **Custom Hooks**: Implementação de hooks customizados para encapsular lógica de mutations e queries, facilitando a reutilização e manutenção do código.
+- **Testes Unitários**: Configuração de testes para garantir o comportamento esperado das queries e mutations.
 
-## 🛠️ Abrir e Rodar o Projeto
+## Testes
 
-Após baixar o projeto, você pode abrir com seu editor de código preferido. Siga estes passos:
+Para executar os testes unitários:
 
-- Abra o terminal no diretório do projeto.
-- Na raiz do projeto execute `docker compose up`.
-- Execute `yarn` para instalar as dependências.
-- Execute `yarn build` para contruir a aplicação.
-- Inicie o servidor de desenvolvimento com `yarn dev`.
-- Acesse `http://localhost:3000` no navegador para ver o projeto.
+```bash
+yarn test
